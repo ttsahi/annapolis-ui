@@ -10,8 +10,6 @@
 
     (function(module){
 
-        'use strict';
-
         function DeveloperException(message){
             this.message = message;
         }
