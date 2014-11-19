@@ -50,10 +50,10 @@
                     get: function(){ return this._capacity; }
                 },
                 isEmpty: {
-                    get: function(){ return this._keys.length === 0; }
+                    get: function(){ return Object.keys(this._keys).length === 0; }
                 },
                 isFull: {
-                    get: function(){ return this._keys.length === this._capacity; }
+                    get: function(){ return Object.keys(this._keys).length === this._capacity; }
                 },
                 onready: {
                     set: function(callback){
@@ -131,7 +131,7 @@
                     return false;
                 }
 
-                if(this._keys.length === this._elements.length){
+                if(Object.keys(this._keys).length === this._elements.length){
                     return false;
                 }
 
@@ -202,7 +202,7 @@
                     return this.add(entity);
                 }
 
-                return false;
+                return true;
             };
 
             return CollectionManager;
